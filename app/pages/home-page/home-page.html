@@ -1,0 +1,14 @@
+<ion-navbar *navbar>
+  <ion-title>Flash Light</ion-title>
+
+  <ion-buttons end>
+    <button (click)="showAboutInfo()"><ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon></button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content>
+	<button ion-item (click)="switchOff()">
+		<img src="img/off.png"  (click)="switchOff" [hidden]="flashIsON===false">
+		<img src="img/on.png"  (click)="switchOff" [hidden]="flashIsON===true">
+	</button>
+</ion-content>
